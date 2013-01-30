@@ -1,0 +1,21 @@
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>"
+colorscheme desert
+noremap <F3> :NumbersToggle<CR>
+let g:NERDTreeDirArrows=0
+let mapleader=","
+set nospell
+nnoremap <silent> <F9> :TagbarToggle<CR>
+set smarttab
+set smartindent
+set shiftwidth=2
+set tabstop=2
+
+
+" disable auto completion popup
+let g:neocomplcache_disable_auto_complete = 1
+inoremap pumvisible() ? "<C-n>" : check_back_space() ? "<TAB>" : "<C-x><C-u>"
+function! s:check_back_space()"{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}"
+" END disable auto completion popup

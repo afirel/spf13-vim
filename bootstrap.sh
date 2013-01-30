@@ -30,7 +30,7 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $i ] && m
 
 if [ ! -e $endpath/.git ]; then
     echo "cloning spf13-vim"
-    git clone --recursive -b 3.0 http://github.com/spf13/spf13-vim.git $endpath
+    git clone --recursive -b 3.0 http://github.com/afirel/spf13-vim.git $endpath
 else
     echo "updating spf13-vim"
     cd $endpath && git pull
@@ -42,6 +42,7 @@ lnif $endpath/.vimrc $HOME/.vimrc
 lnif $endpath/.vimrc.fork $HOME/.vimrc.fork
 lnif $endpath/.vimrc.bundles $HOME/.vimrc.bundles
 lnif $endpath/.vimrc.bundles.fork $HOME/.vimrc.bundles.fork
+lnif $endpath/.vimrc.local $HOME/.vimrc.local
 lnif $endpath/.vim $HOME/.vim
 if [ ! -d $endpath/.vim/bundle ]; then
     mkdir -p $endpath/.vim/bundle

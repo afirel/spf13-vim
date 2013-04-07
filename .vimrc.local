@@ -26,3 +26,6 @@ function! s:check_back_space()"{{{
     return !col || getline('.')[col - 1] =~ '\s'
 endfunction"}}"
 " END disable auto completion popup
+
+map <leader>gr :topleft :split config/routes.rb<cr>
+map <leader>gg :topleft 100 :split Gemfile<cr>

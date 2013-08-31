@@ -26,7 +26,7 @@ today=`date +%Y%m%d`
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $i ] && mv $i $i.$today; done
 
 endpath="$( cd "$( dirname "$0" )" && pwd)"
-branch="3.0"
+branch="airline"
 
 if [ ! -e $endpath/.git ]; then
     endpath="$HOME/.spf13-vim-3"

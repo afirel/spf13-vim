@@ -85,6 +85,8 @@
     if !exists('g:spf13_bundle_groups')
         let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala']
     endif
+    
+    Bundle 'ingydotnet/yaml-vim'
 
     " To override all the included bundles, put
     " g:override_spf13_bundles = 1
